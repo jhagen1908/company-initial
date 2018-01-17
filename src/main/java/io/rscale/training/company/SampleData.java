@@ -17,16 +17,16 @@ public class SampleData implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... strings) throws Exception {	 
+    public void run(String... strings) throws Exception {
     	add(new Company("Resilient Scale", new String[]{"Resilient Scale, Inc", "Resilient Scale Inc", "RScale"}, "https://rscale.io", "resilientscale"));
     	add(new Company("Cloud Foundry", new String[]{"Cloud Foundry Foundation", "CFF"}, "https://cloudfoundry.org", "cloudfoundry"));
         repository.findAll().forEach(System.out::println);
     }
-    	
+
     private void add(Company company) throws Exception {
     	if (repository.findByNameIgnoreCase(company.getName()).isEmpty()) {
     		repository.save(company);
     	}
     }
-    
+
 }
