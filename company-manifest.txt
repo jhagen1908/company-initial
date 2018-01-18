@@ -9,6 +9,7 @@ applications:
     path: C:\Users\jerry.hagen\Documents\GitHub\company-initial\build\libs\company.jar
     services: 
       - company-database
+      - config-server
     timeout: 180
     env:
       APP_VERSION: blue

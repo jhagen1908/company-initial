@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.beans.factory.UnsatisfiedDependencyException;
 import java.sql.DatabaseMetaData;
+import org.springframework.beans.factory.annotation.Autowire;
 
 @Configuration
 @Profile("cloud")
